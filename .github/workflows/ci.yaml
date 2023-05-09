@@ -6,7 +6,12 @@ jobs:
     steps:
       - name: Get code from repository
         uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm install
-      - name: Run server
-        run: npm start
+      - name: Build and push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: andremmiller/myapp
+          tags: 3.0, latest
+          registry: DOCKER.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+        

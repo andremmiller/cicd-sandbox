@@ -1,10 +1,10 @@
 name: Continous Integration
 on: push
 jobs:
-  build_run:
+  build_push:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code from repository
+      - name: Get code
         uses: actions/checkout@v3
       - name: Build and push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6

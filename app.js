@@ -6,5 +6,5 @@ app.listen(process.env.port || 3000, (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send("Aplicação node rodando em container -- uploaded from GitHub Actions");
+  res.send("Aplicação node rodando em container -- uploaded from GitHub Action");
 });

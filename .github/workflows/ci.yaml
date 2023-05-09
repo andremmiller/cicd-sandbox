@@ -1,0 +1,12 @@
+name: Continous Integration
+on: push
+jobs:
+  build_run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code from repository
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Run server
+        run: npm start

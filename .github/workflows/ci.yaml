@@ -21,7 +21,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: andremmiller/myapp:latest
+          tags: andremmiller/myapp:latest,andremmiller/myapp:4.0
       
       # - name: Build and push Docker image
       #   uses: mr-smithers-excellent/docker-build-push@v6
